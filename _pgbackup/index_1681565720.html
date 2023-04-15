@@ -8,26 +8,31 @@
         <meta name="author" content=""> 
         <title>New page</title>         
         <link href="css/style.css" rel="stylesheet"> 
-        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
     </head>     
     <body>
-        <header class="site-header"> <a class="screen-reader-text skip-link" href="#content">Skip to content</a> 
-            <div class="header__innerwrapper layout__x-padding"> 
+        <header class="site-header" data-pg-ia-scene='{"s":"onLeave","d":"0","o":"200px","pin_type":"transform","l":[{"name":"Scroll to Top Visibility","a":{"l":[{"t":"$#topBtn","l":[{"t":"set","p":0,"d":0,"l":{"autoAlpha":0}},{"t":"set","p":0.07,"d":0,"l":{"autoAlpha":1}}]}]}}]}'> <a class="screen-reader-text skip-link" href="#content">Skip to content</a> 
+            <div class="header__innerwrapper layout__x-padding" data-pg-ia-scene='{"s":"onLeave","d":"0","o":"200px","l":[{"name":"Sticky Header Visibility","a":{"l":[{"t":"","l":[{"t":"set","p":0.05,"d":0,"l":{"yPercent":-100,"autoAlpha":0,"position":"fixed"}},{"t":"tween","p":0.16,"d":0.2,"l":{"yPercent":0,"autoAlpha":1,"backgroundColor":"rgba(0, 0, 0, 0.3)"}}]},{"t":".header__logo-wrapper img","l":[{"t":"set","p":0,"d":0,"l":{"maxWidth":"15rem"}},{"t":"set","p":0.16,"d":0,"l":{"maxWidth":"7rem"}}]},{"t":".header__layout-grid","l":[{"t":"tween","p":0,"d":0.5,"l":{"paddingTop":"0.1rem","paddingBottom":"0.1rem"}}]}]}}],"redm":"true"}'> 
                 <div class="header__layout-grid"> 
-                    <div class="header__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
+                    <div class="header__logo-wrapper">
+                        <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
                     </div>                     
                     <div class="header__mobile-menu" data-pg-name="Mobile Menu" x-data="{ mobilemenuopen: false }" @keydown.escape="isOpen = false"> 
-                        <button class="mobile-menu__trigger" @click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" type="button"><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
+                        <button class="mobile-menu__trigger" @click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" type="button">
+                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span>
+                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span>
+                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
                         </button>                         
                         <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
                             <div class="mobile-menu__background" @click="mobilemenuopen = !mobilemenuopen" x-show="mobilemenuopen" x-cloak></div>                             
-                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
+                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
                                 <nav class="mobile-menu__nav" aria-label="Mobile Menu"> 
                                     <div> 
-                                        <div class="header__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
+                                        <div class="header__logo-wrapper">
+                                            <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
                                         </div>                                         
                                         <ul class="mobile-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                            <li><a href="">Item One</a> 
+                                            <li>
+                                                <a href="">Item One</a> 
                                             </li>                                             
                                             <li class="has-submenu" x-data="{
                                         open: false,
@@ -63,8 +68,9 @@
                                                         </svg>                                                         
                                                     </button>                                                     
                                                 </div>                                                 
-                                                <ul id="mobilemenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="submenu"> 
-                                                    <li><a>Sub Menu One</a> 
+                                                <ul id="mobilemenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak> 
+                                                    <li>
+                                                        <a>Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a>Sub Menu Two</a> 
                                                     </li>                                                     
@@ -86,7 +92,8 @@
                     <div class="header__main-menu" data-pg-name="Main Menu"> 
                         <nav> 
                             <ul class="drop-shadow main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                <li><a href="">Item One</a> 
+                                <li>
+                                    <a href="">Item One</a> 
                                 </li>                                 
                                 <li class="has-submenu" x-data="{
                                         open: false,
@@ -115,14 +122,15 @@
                                             }
                                         }
                                     }" @keydown.escape.prevent.stop="close($refs.button)" @focusin.window="! $refs.panel.contains($event.target) && close()" @mouseenter="hover()" @mouseleave="hover()" x-id="['mainmenu-dropdown']"> 
-                                    <div><a href="">Item Two</a> 
+                                    <div>
+                                        <a href="">Item Two</a> 
                                         <button type="button" aria-expanded="false" aria-controls="mainmenu-submenu" aria-label="Expand Submenu" class="main-menu__submenutrigger" x-ref="button" @click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu-open')"> 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="drop-shadow submenu"> 
+                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak> 
                                         <li> <a>Sub Menu One</a> 
                                         </li>                                         
                                         <li> <a>Sub Menu Two</a> 
@@ -137,6 +145,5 @@
                 </div>                 
             </div>             
         </header>
-        <script src="pgia/lib/pgia.js"></script>
     </body>     
 </html>

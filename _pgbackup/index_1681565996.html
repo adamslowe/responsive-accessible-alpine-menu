@@ -21,7 +21,7 @@
                         </button>                         
                         <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
                             <div class="mobile-menu__background" @click="mobilemenuopen = !mobilemenuopen" x-show="mobilemenuopen" x-cloak></div>                             
-                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
+                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
                                 <nav class="mobile-menu__nav" aria-label="Mobile Menu"> 
                                     <div> 
                                         <div class="header__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
@@ -63,7 +63,7 @@
                                                         </svg>                                                         
                                                     </button>                                                     
                                                 </div>                                                 
-                                                <ul id="mobilemenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="submenu"> 
+                                                <ul id="mobilemenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak> 
                                                     <li><a>Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a>Sub Menu Two</a> 
@@ -122,7 +122,7 @@
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="drop-shadow submenu"> 
+                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak> 
                                         <li> <a>Sub Menu One</a> 
                                         </li>                                         
                                         <li> <a>Sub Menu Two</a> 
