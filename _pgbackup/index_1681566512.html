@@ -82,10 +82,10 @@
                                 </button>                                 
                             </div>                             
                         </div>                         
-                    </div>
+                    </div>                     
                     <div class="header__main-menu" data-pg-name="Main Menu"> 
                         <nav> 
-                            <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
+                            <ul class="drop-shadow main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
                                 <li><a href="">Item One</a> 
                                 </li>                                 
                                 <li class="has-submenu" x-data="{
@@ -122,7 +122,7 @@
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="drop-shadow submenu"> 
+                                    <ul id="mainmenu-submenu" x-ref="panel" x-show="open" x-transition.origin.top @click.outside="close($refs.button)" :id="$id('mainmenu-submenu-open')" x-cloak class="submenu"> 
                                         <li> <a>Sub Menu One</a> 
                                         </li>                                         
                                         <li> <a>Sub Menu Two</a> 
@@ -133,7 +133,7 @@
                                 </li>                                 
                             </ul>                             
                         </nav>                         
-                    </div>                                          
+                    </div>                     
                 </div>                 
             </div>             
         </header>
