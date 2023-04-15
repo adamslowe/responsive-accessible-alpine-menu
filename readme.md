@@ -1,1 +1,2 @@
-- Structure and styling
+- Structure & Markup
+- Styling

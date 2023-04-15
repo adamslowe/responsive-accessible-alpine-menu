@@ -116,7 +116,7 @@ header h1 {
     padding-bottom: 2rem;
 }
 
-/* Menus & Navigation
+/* Main Menu
 ------------------------------------------------------------ */
 .header__main-menu nav {
     display: none;
@@ -253,6 +253,9 @@ header h1 {
     font-weight: normal;
     color: inherit;
 }
+
+/* Mobile Menu
+------------------------------------------------------------ */
 
 .header__mobile-menu {
     grid-area: mobile-menu;
@@ -420,7 +423,5 @@ header h1 {
     z-index: 999;
 }
 
-
-
-
-
+/* New Rules Below
+------------------------------------------------------------ */
