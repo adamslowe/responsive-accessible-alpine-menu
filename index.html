@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="en"> 
+<html lang="en" wp-template wp-template-export-as="index.php" wp-template-define-master-page="true"> 
     <head> 
         <meta charset="utf-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -14,44 +14,37 @@
         <header class="site-header"> <a class="screen-reader-text skip-link" href="#main">Skip to content</a> 
             <div class="contained header__innerwrapper layout__x-padding"> 
                 <div class="header__layout-grid"> 
-                    <div class="header__logo-wrapper">
-                        <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
+                    <div class="header__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
                     </div>                     
                     <div class="header__mobile-menu" data-pg-name="Mobile Menu"> 
-                        <button class="mobile-menu__trigger" type="button">
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span> <span class="screen-reader-text">Open mobile menu</span> 
+                        <button class="mobile-menu__trigger" type="button"><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span> <span class="screen-reader-text">Open mobile menu</span> 
                         </button>                         
                         <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
                             <div class="mobile-menu__background"></div>                             
                             <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel"> 
                                 <nav class="mobile-menu__nav" aria-label="Mobile Menu"> 
                                     <div> 
-                                        <div class="header__logo-wrapper">
-                                            <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
+                                        <div class="header__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
                                         </div>                                         
                                         <ul class="mobile-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                            <li>
-                                                <a href="">Item One</a> 
+                                            <li><a href="#">Item One</a> 
                                             </li>                                             
                                             <li class="has-submenu"> 
-                                                <div> <a href="">Item Two</a> 
-                                                    <button type="button" aria-expanded="false" aria-controls="mobilemenu-submenu" aria-label="Expand Submenu" class="mobile-menu__submenutrigger"> 
+                                                <div> <a href="#">Item Two</a> 
+                                                    <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="mobile-menu__submenutrigger"> 
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                             
                                                         </svg>                                                         
                                                     </button>                                                     
                                                 </div>                                                 
-                                                <ul id="mobilemenu-submenu" class="submenu"> 
-                                                    <li>
-                                                        <a>Sub Menu One</a> 
+                                                <ul class="submenu"> 
+                                                    <li><a href="#">Sub Menu One</a> 
                                                     </li>                                                     
-                                                    <li> <a>Sub Menu Two</a> 
+                                                    <li> <a href="#">Sub Menu Two</a> 
                                                     </li>                                                     
                                                 </ul>                                                 
                                             </li>                                             
-                                            <li> <a href="">Item Three</a> 
+                                            <li> <a href="#">Item Three</a> 
                                             </li>                                             
                                         </ul>                                         
                                     </div>                                     
@@ -67,26 +60,24 @@
                     <div class="header__main-menu" data-pg-name="Main Menu"> 
                         <nav> 
                             <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                <li>
-                                    <a href="">Item One</a> 
+                                <li><a href="#">Item One</a> 
                                 </li>                                 
-                                <li class="has-submenu"> 
-                                    <div>
-                                        <a href="">Item Two</a> 
-                                        <button type="button" aria-expanded="false" aria-controls="mainmenu-submenu" aria-label="Expand Submenu" class="main-menu__submenutrigger"> 
+                                <li class="has-submenu" data-pg-ia='{"l":[{"name":"Show Submenu Actions","trg":"no","t":"this","a":{"l":[{"t":".submenu","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":1,"class.remove":"hidden"}}]},{"t":"button","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"true"}}}]},{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"class.add":"menu-opened"}}]}]},"tca":"aria-expanded","tcv":"menu-opened"},{"name":"Hide Submenu Actions","trg":"no","t":"this","a":{"l":[{"t":".submenu","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0,"class.add":"hidden"}}]},{"t":"button","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"false"}}}]},{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"class.remove":"menu-opened"}}]}]},"tca":"aria-expanded","tcv":"menu-opened"},{"name":"Show submenu on Mouseenter","trg":"mouseenter","a":"Show Submenu Actions"},{"name":"Hide submenu on Mouseleave","trg":"mouseleave","a":"Hide Submenu Actions"},{"name":"Hide submenu by esc key","trg":"keydown","keys":"Escape","a":"Hide Submenu Actions"}]}'> 
+                                    <div><a href="#">Item Two</a> 
+                                        <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="main-menu__submenutrigger" data-pg-ia='{"l":[{"name":"Show submenu on click","t":"^.has-submenu","a":"Show Submenu Actions","tc":"no-class","tcv":"menu-opened","rcr":"true"},{"t":"^.has-submenu","a":"Hide Submenu Actions","tc":"class","tcv":"menu-opened","rcr":"true","name":"Hide submenu on click"}]}' aria-controls="mainmenu-submenu"> 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul id="mainmenu-submenu" class="drop-shadow submenu"> 
-                                        <li> <a>Sub Menu One</a> 
+                                    <ul class="drop-shadow submenu" data-pg-ia-hide> 
+                                        <li> <a href="#">Sub Menu One</a> 
                                         </li>                                         
-                                        <li> <a>Sub Menu Two</a> 
+                                        <li> <a href="#">Sub Menu Two</a> 
                                         </li>                                         
                                     </ul>                                     
                                 </li>                                 
-                                <li> <a href="">Item Three</a> 
+                                <li> <a href="#">Item Three</a> 
                                 </li>                                 
                             </ul>                             
                         </nav>                         

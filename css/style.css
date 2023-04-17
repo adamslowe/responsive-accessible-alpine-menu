@@ -234,6 +234,7 @@ header h1 {
     left: 0px;
     z-index: 999;
     background-color: var(--color_main_menu_submenu_bg);
+    gap: 2px;
 }
 
 .main-menu__list .submenu > li {
