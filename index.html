@@ -18,7 +18,7 @@
                                 <img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager">
                             </picture><span class="screen-reader-text">Homepage Link</span></a> 
                     </figure>                     
-                    <div class="header__mobile-menu" data-pg-name="Mobile Menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false"> 
+                    <div class="header__mobile-menu" data-pg-name="Mobile Menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false" data-pg-collapsed> 
                         <button class="mobile-menu__trigger" type="button" aria-expanded="false" aria-label="Mobile Menu Trigger" aria-controls="mobilepanel" id="mobilemenubutton" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" data-pg-collapsed><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
                         </button>                         
                         <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
@@ -56,7 +56,7 @@
                                                         </svg>                                                         
                                                     </button>                                                     
                                                 </div>                                                 
-                                                <ul id="mobilemenu-submenu" class="submenu" x-ref="panel" x-show="open" x-transition.origin.top x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')" x-cloak> 
+                                                <ul id="mobilemenu-submenu" class="submenu" x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')" x-cloak> 
                                                     <li><a href="#">Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a href="#">Sub Menu Two</a> 
@@ -81,7 +81,7 @@
                             <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
                                 <li><a href="#">Item One</a> 
                                 </li>                                 
-                                <li class="has-submenu" class="has-submenu" x-data="{
+                                <li class="has-submenu" x-data="{
                                         open: false,
                                         toggle() {
                                             if (this.open) {
@@ -115,7 +115,7 @@
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul id="mainmenu-submenu" class="drop-shadow submenu" x-ref="panel" x-show="open" x-transition.origin.top x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')" x-cloak> 
+                                    <ul id="mainmenu-submenu" class="drop-shadow submenu" x-ref="panel" x-show="open" x-transition.origin.top x-transition.duration.300ms x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu') x-cloak"> 
                                         <li> <a href="#">Sub Menu One</a> 
                                         </li>                                         
                                         <li> <a href="#">Sub Menu Two</a> 
