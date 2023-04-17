@@ -8,44 +8,50 @@
         <meta name="author" content=""> 
         <title>New page</title>         
         <link href="css/style.css" rel="stylesheet"> 
-        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>         
     </head>     
     <body> 
         <header class="site-header"> <a class="screen-reader-text skip-link" href="#main">Skip to content</a> 
             <div class="contained header__innerwrapper layout__x-padding"> 
                 <div class="header__layout-grid"> 
-                    <div class="header__logo-wrapper">
-                        <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
-                    </div>                     
-                    <div class="header__mobile-menu" data-pg-name="Mobile Menu" data-pg-collapsed> 
-                        <button class="mobile-menu__trigger" type="button" aria-expanded="false" aria-label="Mobile Menu Trigger" aria-controls="mobilepanel" data-pg-ia='{"l":[{"name":"Open Mobile Menu Button","a":"Open Mobile Menu Panel"}]}' id="mobilemenutrigger">
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true"></span> <span class="screen-reader-text">Open mobile menu</span> 
+                    <figure class="header__logo-wrapper" data-pg-collapsed><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager"><span class="screen-reader-text">Homepage Link</span></a> 
+                    </figure>                     
+                    <div class="header__mobile-menu" data-pg-name="Mobile Menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false" data-pg-collapsed> 
+                        <button class="mobile-menu__trigger" type="button" aria-expanded="false" aria-label="Mobile Menu Trigger" aria-controls="mobilepanel" id="mobilemenubutton" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" data-pg-collapsed><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
                         </button>                         
-                        <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper" data-pg-ia-hide data-pg-ia='{"l":[{"name":"Open Mobile Menu Panel","trg":"no","a":{"l":[{"t":"$#mobilemenuwrapper","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":1}}]},{"t":"$#mobilemenutrigger","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"true"}}}]},{"t":"$#mobilemenuclose","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"true"}}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(1)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":45,"yPercent":300}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(2)","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(3)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":-45,"yPercent":-300}}]}]},"d":"100ms","redm":"true"},{"trg":"no","a":{"l":[{"t":"","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0}}]},{"t":"$.mobile-menu__trigger","l":[{"t":"set","p":0.02,"d":0,"l":{"attr":{"aria-expanded":"false"}}}]},{"t":"$#mobilemenuclose","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"false"}}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(1)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":0,"yPercent":0}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(2)","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":1}}]},{"t":"$#mobilemenutrigger #gt# span:nth-of-type(3)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":0,"yPercent":0}}]}]},"name":"Close Mobile Menu Panel"}]}' data-pg-collapsed> 
-                            <div class="mobile-menu__background" data-pg-ia='{"l":[{"name":"Close Moble Menu with Background","a":"Close Mobile Menu Panel","t":"$#mobilemenuwrapper"}]}'></div>                             
-                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel"> 
+                        <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
+                            <div class="mobile-menu__background" x-on:click="mobilemenuopen = !mobilemenuopen" x-show="mobilemenuopen" x-cloak></div>                             
+                            <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
                                 <nav class="mobile-menu__nav" aria-label="Mobile Menu"> 
                                     <div> 
-                                        <div class="header__logo-wrapper">
-                                            <a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
-                                        </div>                                         
+                                        <figure class="mobile-menu__logo-wrapper"><a href="" cms-site-link="home"><img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo><span class="screen-reader-text">Homepage Link</span></a> 
+                                        </figure>                                         
                                         <ul class="mobile-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                            <li>
-                                                <a href="#">Item One</a> 
+                                            <li><a href="#">Item One</a> 
                                             </li>                                             
-                                            <li class="has-submenu"> 
+                                            <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']"> 
                                                 <div> <a href="#">Item Two</a> 
-                                                    <button type="button" aria-expanded="false" class="mobile-menu__submenutrigger" aria-label="Expand Submenu"> 
+                                                    <button type="button" aria-expanded="false" class="mobile-menu__submenutrigger" aria-label="Expand Submenu" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')"> 
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
                                                             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                             
                                                         </svg>                                                         
                                                     </button>                                                     
                                                 </div>                                                 
-                                                <ul class="submenu"> 
-                                                    <li>
-                                                        <a href="#">Sub Menu One</a> 
+                                                <ul id="mobilemenu-submenu" class="submenu" x-ref="panel" x-show="open" x-transition.origin.top x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')" x-cloak> 
+                                                    <li><a href="#">Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a href="#">Sub Menu Two</a> 
                                                     </li>                                                     
@@ -56,7 +62,7 @@
                                         </ul>                                         
                                     </div>                                     
                                 </nav>                                 
-                                <button data-pg-name="Mobile Menu Close Button" class="mobile-menu__close" title="Mobile Menu Close" aria-controls="mobilepanel" aria-expanded="false" data-pg-ia='{"l":[{"name":"Mobile Menu Close Button","t":"$#mobilemenuwrapper","a":"Close Mobile Menu Panel"}]}' id="mobilemenuclose"> 
+                                <button data-pg-name="Mobile Menu Close Button" class="mobile-menu__close" title="Mobile Menu Close" aria-controls="mobilepanel" aria-expanded="false" id="mobilemenuclose" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen"> 
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"> 
                                         <path d="M6.94004 6L11.14 1.80667C11.2656 1.68113 11.3361 1.51087 11.3361 1.33333C11.3361 1.1558 11.2656 0.985537 11.14 0.860002C11.0145 0.734466 10.8442 0.66394 10.6667 0.66394C10.4892 0.66394 10.3189 0.734466 10.1934 0.860002L6.00004 5.06L1.80671 0.860002C1.68117 0.734466 1.51091 0.663941 1.33337 0.663941C1.15584 0.663941 0.985576 0.734466 0.860041 0.860002C0.734505 0.985537 0.66398 1.1558 0.66398 1.33333C0.66398 1.51087 0.734505 1.68113 0.860041 1.80667L5.06004 6L0.860041 10.1933C0.797555 10.2553 0.747959 10.329 0.714113 10.4103C0.680267 10.4915 0.662842 10.5787 0.662842 10.6667C0.662842 10.7547 0.680267 10.8418 0.714113 10.9231C0.747959 11.0043 0.797555 11.078 0.860041 11.14C0.922016 11.2025 0.99575 11.2521 1.07699 11.2859C1.15823 11.3198 1.24537 11.3372 1.33337 11.3372C1.42138 11.3372 1.50852 11.3198 1.58976 11.2859C1.671 11.2521 1.74473 11.2025 1.80671 11.14L6.00004 6.94L10.1934 11.14C10.2554 11.2025 10.3291 11.2521 10.4103 11.2859C10.4916 11.3198 10.5787 11.3372 10.6667 11.3372C10.7547 11.3372 10.8419 11.3198 10.9231 11.2859C11.0043 11.2521 11.0781 11.2025 11.14 11.14C11.2025 11.078 11.2521 11.0043 11.286 10.9231C11.3198 10.8418 11.3372 10.7547 11.3372 10.6667C11.3372 10.5787 11.3198 10.4915 11.286 10.4103C11.2521 10.329 11.2025 10.2553 11.14 10.1933L6.94004 6Z" fill="#556987"></path>                                         
                                     </svg>                                     
@@ -67,19 +73,43 @@
                     <div class="header__main-menu" data-pg-name="Main Menu"> 
                         <nav id="mainmenu"> 
                             <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                <li>
-                                    <a href="#">Item One</a> 
+                                <li><a href="#">Item One</a> 
                                 </li>                                 
-                                <li class="has-submenu" data-pg-ia='{"l":[{"name":"Show Submenu Actions","trg":"no","t":"this","a":{"l":[{"t":".submenu","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":1,"class.remove":"hidden"}}]},{"t":"button","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"true"}}}]},{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"class.add":"menu-opened"}}]}]},"tca":"aria-expanded","tcv":"menu-opened"},{"name":"Hide Submenu Actions","trg":"no","t":"this","a":{"l":[{"t":".submenu","l":[{"t":"set","p":0,"d":0,"l":{"pgCall":{"start":"","complete":""}}},{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0,"class.add":"hidden"}}]},{"t":"button","l":[{"t":"set","p":0,"d":0,"l":{"attr":{"aria-expanded":"false"}}}]},{"t":"","l":[{"t":"set","p":0,"d":0,"l":{"class.remove":"menu-opened"}}]}]},"tca":"aria-expanded","tcv":"menu-opened"},{"name":"Show submenu on Mouseenter","trg":"mouseenter","a":"Show Submenu Actions"},{"name":"Hide submenu on Mouseleave","trg":"mouseleave","a":"Hide Submenu Actions"},{"name":"Hide submenu by esc key","trg":"keydown","keys":"Escape","a":"Hide Submenu Actions"}]}'> 
-                                    <div>
-                                        <a href="#">Item Two</a> 
-                                        <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="main-menu__submenutrigger" data-pg-ia='{"l":[{"name":"Show submenu on click","t":"^.has-submenu","a":"Show Submenu Actions","tc":"no-class","tcv":"menu-opened","rcr":"true"},{"t":"^.has-submenu","a":"Hide Submenu Actions","tc":"class","tcv":"menu-opened","rcr":"true","name":"Hide submenu on click"}]}' aria-controls="mainmenu-submenu"> 
+                                <li class="has-submenu" class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                        hover() {
+                                            if ('ontouchstart' in document.documentElement) {
+                                                //console.log('supports touch')
+                                                return;
+                                            } else {
+                                                //console.log('does NOT support touch')
+                                                if (this.open) {
+                                                    return this.close()
+                                                }
+                                                this.open = true
+                                            }
+                                        }
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
+                                    <div><a href="#">Item Two</a> 
+                                        <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="main-menu__submenutrigger" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')"> 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
                                             </svg>                                             
                                         </button>                                         
                                     </div>                                     
-                                    <ul class="drop-shadow submenu" data-pg-ia-hide> 
+                                    <ul id="mainmenu-submenu" class="drop-shadow submenu" x-ref="panel" x-show="open" x-transition.origin.top x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')" x-cloak> 
                                         <li> <a href="#">Sub Menu One</a> 
                                         </li>                                         
                                         <li> <a href="#">Sub Menu Two</a> 
@@ -111,7 +141,8 @@
                     <p>This is a paragraph, one or more lines of text. Each paragraph is displayed in a new line.</p> 
                 </div>                 
             </div>             
+            <!-- Alpine with Focus Plugin -->
+            <script src="js/alpine-with-focus.js"></script>             
         </footer>         
-        <script src="pgia/lib/pgia.js"></script>         
     </body>     
 </html>
