@@ -20,6 +20,10 @@ picture {
     width: 100%;
 }
 
+figure {
+    margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
 /* Needed to cloak hidden elements before JS loads when using Alpine.js */
 [x-cloak] {
     display: none !important;
@@ -111,8 +115,8 @@ button,
 }
 
 .header__logo-wrapper {
-    max-width: 15rem;
     margin: 0;
+    width: 16rem;
 }
 
 header h1 {
@@ -371,7 +375,7 @@ header h1 {
 }
 
 .mobile-menu__logo-wrapper {
-    max-width: 15rem;
+    width: 16rem;
     margin: 0;
 }
 
