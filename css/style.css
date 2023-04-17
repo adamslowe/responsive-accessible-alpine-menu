@@ -6,21 +6,18 @@
     --white: #ffffff;
     --light: #f8f9fa;
     --dark: #212529;
-    --color_main_menu_link: var(--dark);
-    --color_main_menu_link_hover: var(--primary);
-    --color_main_menu_item_bg: var(--white);
-    --color_main_menu_item_bg_hover: var(--light);
-    --color_main_menu_item_border_hover: var(--primary);
-    --color_main_menu_submenu_bg: var(--light);
-    --color_main_menu_submenu_item_bg: var(--light);
-    --color_main_menu_submenu_item_bg_hover: var(--light);
-    --color_main_menu_submenu_item_text: var(--secondary);
-    --color_main_menu_submenu_item_text_hover: var(--primary);
-    --color_mobile_menu_button_bg: var(--light);
-    --color_mobile_menu_button_lines: var(--dark);
-    --color_mobile_menu_panel_bg: var(--white);
-    --color_mobile_menu_text: var(--dark);
-    --color_mobile_menu_text_hover: var(--secondary);
+}
+
+body {
+    margin: 0;
+}
+
+img,
+picture {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
 }
 
 /* Utilities
@@ -73,9 +70,6 @@
 
 /* Header and Footer
 ------------------------------------------------------------ */
-body {
-    margin: 0;
-}
 
 .header__layout-grid {
     display: grid;
@@ -95,7 +89,7 @@ body {
 @media (min-width:768px) {
     .header__layout-grid {
         display: grid;
-        grid-template-columns: fit-content(30%) 1fr auto;
+        grid-template-columns: fit-content(16rem) 1fr auto;
         grid-template-rows: auto;
         grid-template-areas: 'logo mobile-menu main-menu';
         padding-top: 1rem;
@@ -118,6 +112,19 @@ header h1 {
 
 /* Main Menu
 ------------------------------------------------------------ */
+.header__main-menu {
+    --color_main_menu_link: var(--dark);
+    --color_main_menu_link_hover: var(--primary);
+    --color_main_menu_item_bg: var(--white);
+    --color_main_menu_item_bg_hover: var(--light);
+    --color_main_menu_item_border_hover: var(--primary);
+    --color_main_menu_submenu_bg: var(--light);
+    --color_main_menu_submenu_item_bg: var(--light);
+    --color_main_menu_submenu_item_bg_hover: var(--light);
+    --color_main_menu_submenu_item_text: var(--secondary);
+    --color_main_menu_submenu_item_text_hover: var(--primary);
+}
+
 .header__main-menu nav {
     display: none;
     padding: 1rem 2rem;
@@ -257,6 +264,13 @@ header h1 {
 
 /* Mobile Menu
 ------------------------------------------------------------ */
+.header__mobile-menu {
+    --color_mobile_menu_button_bg: var(--light);
+    --color_mobile_menu_button_lines: var(--dark);
+    --color_mobile_menu_panel_bg: var(--white);
+    --color_mobile_menu_text: var(--dark);
+    --color_mobile_menu_text_hover: var(--secondary);
+}
 
 .header__mobile-menu {
     grid-area: mobile-menu;
@@ -305,7 +319,6 @@ header h1 {
 }
 
 .mobile-menu__background {
-    flex: 1;
     width: 100%;
     height: 100%;
     z-index: 50;
