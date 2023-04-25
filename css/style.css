@@ -21,7 +21,7 @@ picture {
 }
 
 figure {
-    margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+    margin: 1em 0;
 }
 
 /* Needed to cloak hidden elements before JS loads when using Alpine.js */
@@ -102,7 +102,7 @@ button,
     align-items: center;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .header__layout-grid {
         display: grid;
         grid-template-columns: auto 1fr auto;
@@ -151,7 +151,7 @@ header h1 {
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .header__main-menu nav {
         display: flex;
         padding: unset;
@@ -181,7 +181,7 @@ header h1 {
     position: relative;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .header__main-menu {
         display: flex;
     }
@@ -209,7 +209,7 @@ header h1 {
     color: var(--color_main_menu_link_hover);
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .main-menu__list {
         flex-direction: row;
     }
@@ -217,7 +217,6 @@ header h1 {
 
 .header__main-menu a {
     display: flex;
-    color: inherit;
     font-weight: normal;
     font-size: 1rem;
     padding: 0.75rem 1.75rem;
@@ -300,7 +299,7 @@ header h1 {
     justify-content: flex-end;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .header__mobile-menu {
         display: none;
     }

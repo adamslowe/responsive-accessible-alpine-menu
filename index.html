@@ -13,32 +13,26 @@
         <header class="site-header"> <a class="screen-reader-text skip-link" href="#main">Skip to content</a> 
             <div class="contained header__innerwrapper layout__x-padding"> 
                 <div class="header__layout-grid"> 
-                    <figure class="header__logo-wrapper">
-                        <a href="#" cms-site-link="home"><picture>
+                    <figure class="header__logo-wrapper"><a href="#" cms-site-link="home"><picture>
                                 <source srcset="assets/images/logoipsum-logo-6.svg"/>
                                 <img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager">
                             </picture><span class="screen-reader-text">Homepage Link</span></a> 
                     </figure>                     
                     <div class="header__mobile-menu" data-pg-name="Mobile Menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false"> 
-                        <button class="mobile-menu__trigger" type="button" aria-expanded="false" aria-label="Mobile Menu Trigger" aria-controls="mobilepanel" id="mobilemenubutton" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" data-pg-collapsed>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span>
-                            <span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
+                        <button class="mobile-menu__trigger" type="button" aria-expanded="false" aria-label="Mobile Menu Trigger" aria-controls="mobilepanel" id="mobilemenubutton" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen" data-pg-collapsed><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}" x-transition.duration.300ms></span><span class="header__mobile-menu--trigger-lines mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}" x-transition.duration.300ms></span> <span class="screen-reader-text">Open mobile menu</span> 
                         </button>                         
                         <div id="mobilemenuwrapper" data-pg-name="Mobile Menu Wrapper"> 
                             <div class="mobile-menu__background" x-on:click="mobilemenuopen = !mobilemenuopen" x-show="mobilemenuopen" x-cloak></div>                             
                             <div data-pg-name="Mobile Panel" id="mobilepanel" class="drop-shadow mobile-menu__panel" x-show="mobilemenuopen" x-transition.duration.300ms x-cloak> 
                                 <nav class="mobile-menu__nav" aria-label="Mobile Menu"> 
                                     <div> 
-                                        <figure class="mobile-menu__logo-wrapper">
-                                            <a href="#" cms-site-link="home"><picture>
+                                        <figure class="mobile-menu__logo-wrapper"><a href="#" cms-site-link="home"><picture>
                                                     <source srcset="assets/images/logoipsum-logo-6.svg"/>
                                                     <img src="assets/images/logoipsum-logo-6.png" alt="Lorem Ipsum Logo" cms-site-logo loading="eager">
                                                 </picture><span class="screen-reader-text">Homepage Link</span><span class="screen-reader-text">Homepage Link</span></a> 
                                         </figure>                                         
                                         <ul class="mobile-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                            <li>
-                                                <a href="#">Item One</a> 
+                                            <li><a href="#">Item One</a> 
                                             </li>                                             
                                             <li class="has-submenu" x-data="{
                                         open: false,
@@ -63,8 +57,7 @@
                                                     </button>                                                     
                                                 </div>                                                 
                                                 <ul id="mobilemenu-submenu" class="submenu" x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')" x-cloak> 
-                                                    <li>
-                                                        <a href="#">Sub Menu One</a> 
+                                                    <li><a href="#">Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a href="#">Sub Menu Two</a> 
                                                     </li>                                                     
@@ -93,8 +86,7 @@
                                                     </button>                                                     
                                                 </div>                                                 
                                                 <ul id="mobilemenu-submenu" class="submenu" x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')" x-cloak> 
-                                                    <li>
-                                                        <a href="#">Sub Menu One</a> 
+                                                    <li><a href="#">Sub Menu One</a> 
                                                     </li>                                                     
                                                     <li> <a href="#">Sub Menu Two</a> 
                                                     </li>                                                     
@@ -116,8 +108,7 @@
                     <div class="header__main-menu" data-pg-name="Main Menu"> 
                         <nav id="mainmenu"> 
                             <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu"> 
-                                <li>
-                                    <a href="#">Item One</a> 
+                                <li><a href="#">Item One</a> 
                                 </li>                                 
                                 <li class="has-submenu" x-data="{
                                         open: false,
@@ -146,8 +137,7 @@
                                             }
                                         }
                                     }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
-                                    <div>
-                                        <a href="#">Item Two</a> 
+                                    <div><a href="#">Item Two</a> 
                                         <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="main-menu__submenutrigger" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')"> 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
@@ -188,8 +178,7 @@
                                             }
                                         }
                                     }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
-                                    <div>
-                                        <a href="#">Item Three</a> 
+                                    <div><a href="#">Item Three</a> 
                                         <button type="button" aria-expanded="false" aria-label="Expand Submenu" class="main-menu__submenutrigger" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')"> 
                                             <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" class="bi bi-triangle-fill" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
                                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
