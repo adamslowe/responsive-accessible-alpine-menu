@@ -1,14 +1,14 @@
 <?php
-if ( ! function_exists( 'pgmenu_setup' ) ) :
+if ( ! function_exists( 'menudemo_setup' ) ) :
 
-function pgmenu_setup() {
+function menudemo_setup() {
 
     /*
      * Make theme available for translation.
      * Translations can be filed in the /languages/ directory.
      */
     /* Pinegrow generated Load Text Domain Begin */
-    load_theme_textdomain( 'pgmenu', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'menudemo', get_template_directory() . '/languages' );
     /* Pinegrow generated Load Text Domain End */
 
     // Add default posts and comments RSS feed links to head.
@@ -28,14 +28,16 @@ function pgmenu_setup() {
 
     // Add menus.
     register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'pgmenu' ),
-        'social'  => __( 'Social Links Menu', 'pgmenu' ),
+        'primary' => __( 'Primary Menu', 'menudemo' ),
+        'social'  => __( 'Social Links Menu', 'menudemo' ),
     ) );
 
 /*
      * Register custom menu locations
      */
     /* Pinegrow generated Register Menus Begin */
+
+    register_nav_menu(  'mobilemenu', __( 'Mobile Menu', 'menudemo' )  );
 
     /* Pinegrow generated Register Menus End */
     
@@ -66,14 +68,14 @@ function pgmenu_setup() {
      */
      add_post_type_support( 'page', 'excerpt' );
 }
-endif; // pgmenu_setup
+endif; // menudemo_setup
 
-add_action( 'after_setup_theme', 'pgmenu_setup' );
+add_action( 'after_setup_theme', 'menudemo_setup' );
 
 
-if ( ! function_exists( 'pgmenu_init' ) ) :
+if ( ! function_exists( 'menudemo_init' ) ) :
 
-function pgmenu_init() {
+function menudemo_init() {
 
     
     // Use categories and tags with attachments
@@ -95,14 +97,14 @@ function pgmenu_init() {
     /* Pinegrow generated Taxonomies End */
 
 }
-endif; // pgmenu_setup
+endif; // menudemo_setup
 
-add_action( 'init', 'pgmenu_init' );
+add_action( 'init', 'menudemo_init' );
 
 
-if ( ! function_exists( 'pgmenu_custom_image_sizes_names' ) ) :
+if ( ! function_exists( 'menudemo_custom_image_sizes_names' ) ) :
 
-function pgmenu_custom_image_sizes_names( $sizes ) {
+function menudemo_custom_image_sizes_names( $sizes ) {
 
     /*
      * Add names of custom image sizes.
@@ -112,14 +114,14 @@ function pgmenu_custom_image_sizes_names( $sizes ) {
     /* Pinegrow generated Image Sizes Names End */
     return $sizes;
 }
-add_action( 'image_size_names_choose', 'pgmenu_custom_image_sizes_names' );
-endif;// pgmenu_custom_image_sizes_names
+add_action( 'image_size_names_choose', 'menudemo_custom_image_sizes_names' );
+endif;// menudemo_custom_image_sizes_names
 
 
 
-if ( ! function_exists( 'pgmenu_widgets_init' ) ) :
+if ( ! function_exists( 'menudemo_widgets_init' ) ) :
 
-function pgmenu_widgets_init() {
+function menudemo_widgets_init() {
 
     /*
      * Register widget areas.
@@ -128,14 +130,14 @@ function pgmenu_widgets_init() {
 
     /* Pinegrow generated Register Sidebars End */
 }
-add_action( 'widgets_init', 'pgmenu_widgets_init' );
-endif;// pgmenu_widgets_init
+add_action( 'widgets_init', 'menudemo_widgets_init' );
+endif;// menudemo_widgets_init
 
 
 
-if ( ! function_exists( 'pgmenu_customize_register' ) ) :
+if ( ! function_exists( 'menudemo_customize_register' ) ) :
 
-function pgmenu_customize_register( $wp_customize ) {
+function menudemo_customize_register( $wp_customize ) {
     // Do stuff with $wp_customize, the WP_Customize_Manager object.
 
     /* Pinegrow generated Customizer Controls Begin */
@@ -143,32 +145,35 @@ function pgmenu_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls End */
 
 }
-add_action( 'customize_register', 'pgmenu_customize_register' );
-endif;// pgmenu_customize_register
+add_action( 'customize_register', 'menudemo_customize_register' );
+endif;// menudemo_customize_register
 
 
-if ( ! function_exists( 'pgmenu_enqueue_scripts' ) ) :
-    function pgmenu_enqueue_scripts() {
+if ( ! function_exists( 'menudemo_enqueue_scripts' ) ) :
+    function menudemo_enqueue_scripts() {
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_deregister_script( 'pgmenu-alpinewithfocus' );
-    wp_enqueue_script( 'pgmenu-alpinewithfocus', get_template_directory_uri() . '/js/alpine-with-focus.js', [], '0.0.8', true);
+    wp_deregister_script( 'menudemo-cdn' );
+    wp_enqueue_script( 'menudemo-cdn', 'https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js', [], '1.0.3', true);
+
+    wp_deregister_script( 'menudemo-cdn-1' );
+    wp_enqueue_script( 'menudemo-cdn-1', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', [], '1.0.3', true);
 
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'pgmenu-style' );
-    wp_enqueue_style( 'pgmenu-style', get_template_directory_uri() . '/css/style.css', [], '0.0.8', 'all');
+    wp_deregister_style( 'menudemo-style' );
+    wp_enqueue_style( 'menudemo-style', get_template_directory_uri() . '/css/style.css', [], '1.0.3', 'all');
 
-    wp_deregister_style( 'pgmenu-style-1' );
-    wp_enqueue_style( 'pgmenu-style-1', get_bloginfo('stylesheet_url'), [], '0.0.8', 'all');
+    wp_deregister_style( 'menudemo-style-1' );
+    wp_enqueue_style( 'menudemo-style-1', get_bloginfo('stylesheet_url'), [], '1.0.3', 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
     }
-    add_action( 'wp_enqueue_scripts', 'pgmenu_enqueue_scripts' );
+    add_action( 'wp_enqueue_scripts', 'menudemo_enqueue_scripts' );
 endif;
 
 function pgwp_sanitize_placeholder($input) { return $input; }
