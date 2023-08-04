@@ -8,7 +8,7 @@ function menudemo_setup() {
      * Translations can be filed in the /languages/ directory.
      */
     /* Pinegrow generated Load Text Domain Begin */
-    load_theme_textdomain( 'menudemo', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'pgmenutest', get_template_directory() . '/languages' );
     /* Pinegrow generated Load Text Domain End */
 
     // Add default posts and comments RSS feed links to head.
@@ -37,7 +37,9 @@ function menudemo_setup() {
      */
     /* Pinegrow generated Register Menus Begin */
 
-    register_nav_menu(  'mobilemenu', __( 'Mobile Menu', 'menudemo' )  );
+    register_nav_menu(  'mobilemenu', __( 'Mobile Menu', 'pgmenutest' )  );
+
+    register_nav_menu(  'legal_menu', __( 'Legal Menu', 'pgmenutest' )  );
 
     /* Pinegrow generated Register Menus End */
     
@@ -154,21 +156,15 @@ if ( ! function_exists( 'menudemo_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_deregister_script( 'menudemo-cdn' );
-    wp_enqueue_script( 'menudemo-cdn', 'https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js', [], '1.0.3', true);
-
-    wp_deregister_script( 'menudemo-cdn-1' );
-    wp_enqueue_script( 'menudemo-cdn-1', 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js', [], '1.0.3', true);
-
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'menudemo-style' );
-    wp_enqueue_style( 'menudemo-style', get_template_directory_uri() . '/css/style.css', [], '1.0.3', 'all');
+    wp_deregister_style( 'pgmenutest-style' );
+    wp_enqueue_style( 'pgmenutest-style', get_template_directory_uri() . '/css/style.css', [], '1.0.8', 'all');
 
-    wp_deregister_style( 'menudemo-style-1' );
-    wp_enqueue_style( 'menudemo-style-1', get_bloginfo('stylesheet_url'), [], '1.0.3', 'all');
+    wp_deregister_style( 'pgmenutest-style-1' );
+    wp_enqueue_style( 'pgmenutest-style-1', get_bloginfo('stylesheet_url'), [], '1.0.8', 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 

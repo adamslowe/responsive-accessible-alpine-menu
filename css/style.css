@@ -362,5 +362,40 @@ button,
     padding: 0 1rem;
 }
 
+
+.legal-menu__nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legal-menu__nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.125rem;
+}
+
+
+/* Footer Menu
+------------------------------------------------------------ */
+.legal-menu__nav li:not(:first-of-type) {
+    border-left: 1px solid var(--white);
+}
+
+.legal-menu__nav a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.5rem;
+}
+
+.legal-menu__nav a:hover {
+    color: var(--primary);
+}
+
 /* New Stuff
 ------------------------------------------------------------ */

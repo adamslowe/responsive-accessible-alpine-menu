@@ -1,0 +1,236 @@
+<!DOCTYPE html> 
+<html lang="en" wp-template wp-template-no-export> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="description" content=""> 
+        <meta name="author" content=""> 
+        <title>New page</title>         
+        <link href="css/normalize.css" rel="stylesheet"> 
+        <link href="css/style.css" rel="stylesheet"> 
+    </head>     
+    <body>
+        <header class="site-header" wp-template-part wp-template-part-slug="template-parts/layout" wp-template-part-name="header" wp-include-template-part wp-include-template-part-slug="template-parts/layout" wp-include-template-part-name="header">
+            <a href="#main" class="screen-reader-text">Skip to content</a>
+            <div class="layout__contained layout__x-padding">
+                <div class="header__layout-grid">
+                    <figure class="header__logo-wrapper">
+                        <a href="#" cms-site-link="home"><picture>
+                                <img src="assets/images/logoipsum-logo-6.png" cms-site-logo/>
+                            </picture><span class="screen-reader-text">Homepage Link</span></a>
+                    </figure>
+                    <div class="header__mobile-menu" x-data="{ mobilemenuopen: false }" x-on:keydown.escape="isOpen = false">
+                        <button class="mobile-menu__trigger" aria-label="Mobile Menu Trigger" type="button" aria-expanded="false" aria-controls="mobilepanel" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen">
+                            <span class="mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line1' : mobilemenuopen}"></span>
+                            <span class="mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line2' : mobilemenuopen}"></span>
+                            <span class="mobile-menu__trigger-lines" aria-hidden="true" :class="{'mobile-menu__trigger-lines--line3' : mobilemenuopen}"></span>
+                            <span class="screen-reader-text">Open Mobile Menu</span>
+                        </button>
+                        <div class="mobile-menu__wrapper" x-cloak>
+                            <div class="mobile-menu__background" x-on:click="mobilemenuopen = !mobilemenuopen" x-show="mobilemenuopen"></div>
+                            <div class="drop-shadow mobile-menu__panel" id="mobilepanel" x-show="mobilemenuopen">
+                                <button type="button" aria-label="Mobile Menu Close" aria-expanded="false" class="mobile-menu__close" aria-controls="mobilepanel" x-on:click="mobilemenuopen = !mobilemenuopen" :aria-expanded="mobilemenuopen">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1.5em" height="1.5em">
+                                        <g>
+                                            <path fill="none" d="M0 0h24v24H0z"/>
+                                            <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <nav aria-label="Mobile Menu" class="mobile-menu__nav">
+                                    <figure class="mobile-menu__logo-wrapper"><a href="#" cms-site-link="home"><picture>
+                                                <img src="assets/images/logoipsum-logo-6.png" cms-site-logo/>
+                                            </picture><span class="screen-reader-text">Homepage Link</span></a>
+                                    </figure>
+                                    <ul class="mobile-menu__list" cms-menu="mobilemenu" cms-menu-register cms-menu-register-description="Mobile Menu" cms-menu-dropdown="> li:nth-of-type(2)">
+                                        <li> <a href="#">Item One</a>
+                                        </li>
+                                        <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']"> 
+                                            <div><a href="#">Item Two</a>
+                                                <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
+                                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
+                                                <li> <a href="#">Sub Menu One</a>
+                                                </li>
+                                                <li> <a href="#">Sub Menu Two</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['mobilemenu-submenu']" cms-no-export> 
+                                            <div>
+                                                <a href="#">Item Three</a>
+                                                <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mobilemenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mobilemenu-submenu')">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="1rem" :class="{'rotate-90': open}" viewBox="0 0 16 16" width="1rem"> 
+                                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>                                                         
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mobilemenu-submenu')">
+                                                <li> <a href="#">Sub Menu One</a>
+                                                </li>
+                                                <li> <a href="#">Sub Menu Two</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li cms-no-export> <a href="#">Item Four</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__main-menu">
+                        <nav aria-label="Main Menu" class="main-menu__nav">
+                            <ul class="main-menu__list" cms-menu="primary" cms-menu-dropdown=".has-submenu">
+                                <li> <a href="#">Item One</a>
+                                </li>
+                                <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                        hover() {
+                                            if ('ontouchstart' in document.documentElement) {
+                                                //console.log('supports touch')
+                                                return;
+                                            } else {
+                                                //console.log('does NOT support touch')
+                                                if (this.open) {
+                                                    return this.close()
+                                                }
+                                                this.open = true
+                                            }
+                                        }
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']"> 
+                                    <div>
+                                        <a href="#">Item Two</a>
+                                        <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
+                                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
+                                        <li> <a href="#">Sub Menu One</a>
+                                        </li>
+                                        <li> <a href="#">Sub Menu Two</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu" x-data="{
+                                        open: false,
+                                        toggle() {
+                                            if (this.open) {
+                                                return this.close()
+                                            }
+                                            this.$refs.button.focus()
+                                            this.open = true
+                                        },
+                                        close(focusAfter) {
+                                            if (! this.open) return
+                                            this.open = false
+                                            focusAfter && focusAfter.focus()
+                                        },
+                                        hover() {
+                                            if ('ontouchstart' in document.documentElement) {
+                                                //console.log('supports touch')
+                                                return;
+                                            } else {
+                                                //console.log('does NOT support touch')
+                                                if (this.open) {
+                                                    return this.close()
+                                                }
+                                                this.open = true
+                                            }
+                                        }
+                                    }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-on:mouseenter="hover()" x-on:mouseleave="hover()" x-id="['mainmenu-submenu']" cms-no-export> 
+                                    <div>
+                                        <a href="#">Item Three</a>
+                                        <button type="button" aria-label="Expand Submenu" aria-expanded="false" aria-controls="mainmenu-submenu" x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('mainmenu-submenu')">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="0.875em" height="0.875em" fill="currentColor" viewBox="0 0 16 16" :class="{'rotate-90': open}"> 
+                                                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/> 
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="drop-shadow submenu" x-cloak x-ref="panel" x-show="open" x-on:click.outside="close($refs.button)" :id="$id('mainmenu-submenu')">
+                                        <li> <a href="#">Sub Menu One</a>
+                                        </li>
+                                        <li> <a href="#">Sub Menu Two</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li cms-no-export> <a href="#">Item Four</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <footer class="site-footer" wp-template-part wp-template-part-slug="template-parts/layout" wp-template-part-name="footer" wp-include-template-part wp-include-template-part-slug="template-parts/layout" wp-include-template-part-name="footer">
+            <div class="layout__contained layout__x-padding">
+                <p>This is a paragraph, one or more lines of text. Each paragraph is displayed in a new line.</p>
+                <div class="footer__legal-menu" wp-if-has-nav-menu="legal_menu"> 
+                    <nav class="legal-menu__nav" aria-label="Legal Menu"> 
+                        <ul cms-menu="legal_menu" cms-menu-register cms-menu-register-description="Legal Menu"> 
+                            <li>
+                                <a href="#">Item One </a> 
+                            </li>                             
+                            <li> <a href="#">Item Two </a> 
+                            </li>                             
+                            <li>
+                                <a href="#">Item Three</a> 
+                            </li>                             
+                        </ul>                         
+                    </nav>                     
+                </div>
+            </div>
+            <!-- Alpine Plugins -->
+            <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+            <!-- Alpine Core -->
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        </footer>
+    </body>     
+</html>
