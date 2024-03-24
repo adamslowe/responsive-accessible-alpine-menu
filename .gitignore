@@ -144,3 +144,6 @@ _pginfo
 .DS_Store
 /._index.html
 
+#Project specific
+./functions.php
+./style.css
