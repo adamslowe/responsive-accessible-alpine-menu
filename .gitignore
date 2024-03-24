@@ -147,3 +147,4 @@ _pginfo
 #Project specific
 ./functions.php
 ./style.css
+./pinegrow.json
