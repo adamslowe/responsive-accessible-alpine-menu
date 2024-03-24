@@ -137,6 +137,7 @@ composer.lock
 # pinegrow
 _pgexport
 _pgbackup
+_pginfo
 /._pinegrow.json
 
 #System Files
